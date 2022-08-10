@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "typescript_집꾸미기 과제 👩‍💻sohee",
+  "name": "typescript로 사진과 가구 조합 컴포넌트 구현하기",
   "icons": [
     {
       "src": "favicon.ico",
