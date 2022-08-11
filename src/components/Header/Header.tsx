@@ -23,11 +23,7 @@ function Header() {
           <Line />
           <Menu>
             <span>스토어</span>
-          </Menu>
-          <Menu>
             <span>컨텐츠</span>
-          </Menu>
-          <Menu>
             <span>커뮤니티</span>
           </Menu>
         </ul>
@@ -109,14 +105,13 @@ const Line = styled.li`
 const Menu = styled.li`
   height: 68px;
   justify-content: center;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   span {
-    width: 100%;
     color: #181d1f;
     font-size: 17px;
     font-weight: 700;
+    padding: 0 20px;
     cursor: pointer;
   }
 `;
