@@ -4,7 +4,7 @@ import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
 interface Props {
   productInfo: any;
-  search: any;
+  search: boolean[];
   handleSearch: any;
 }
 
