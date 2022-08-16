@@ -9,6 +9,7 @@ interface Props {
 
 export default function HomeFigure(props: Props) {
   const productLists = props.productInfo.productList;
+  console.log(productLists);
 
   return (
     <Figure>
@@ -20,8 +21,10 @@ export default function HomeFigure(props: Props) {
       {productLists?.map((productLists: any, index: number) => {
         return (
           <Button
+            pointX={productLists.pointX}
+            pointY={productLists.pointY}
             onClick={() => props.handleSearch(index)}
-            key={productLists.productId}
+            key={index}
           >
             {!props.search[index] ? (
               <img
@@ -82,7 +85,9 @@ const MainImage = styled.img`
   cursor: pointer;
 `;
 
-const Button = styled.div`
+const Button = styled.div<{ pointX: number; pointY: number }>`
+  top: ${props => props.pointX * 1.6}px;
+  left: ${props => props.pointY * 1.6}px;
   width: 40px;
   height: 40px;
   position: absolute;
