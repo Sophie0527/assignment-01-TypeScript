@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
 function HomeHeader() {
   return (
@@ -21,7 +22,6 @@ function HomeHeader() {
 }
 
 const Header = styled.header`
-  width: 1300px;
   width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -30,6 +30,9 @@ const Header = styled.header`
     font-weight: 100;
     color: #646464;
     padding-bottom: 8px;
+    ${CustomMediaStyle.lessThan('mobile')`
+    padding-bottom: 1px;
+	`}
   }
   h1 {
     font-size: 27px;
@@ -37,6 +40,10 @@ const Header = styled.header`
     color: #181d1f;
     padding-bottom: 8px;
     line-height: 40px;
+    ${CustomMediaStyle.lessThan('mobile')`
+    font-size: 23px;
+    padding-bottom: 3px;
+	`}
   }
 `;
 

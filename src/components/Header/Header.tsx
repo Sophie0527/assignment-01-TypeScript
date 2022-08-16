@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
 function Header() {
   return (
@@ -69,6 +70,11 @@ const HeaderBox = styled.div`
     margin: 0 23px 0 0;
     width: 148px;
     height: 36px;
+    ${CustomMediaStyle.lessThan('mobile')`
+    margin: 0 15px 0 0;
+    width: 135px;
+    height: 34px;
+	`}
   }
   ul {
     height: 68px;
@@ -80,6 +86,9 @@ const HeaderBox = styled.div`
 const Category = styled.li`
   display: flex;
   align-items: center;
+  ${CustomMediaStyle.lessThan('mobile')`
+    margin-left: -30px;
+	`}
   img {
     width: 24px;
     height: 24px;
@@ -91,6 +100,9 @@ const Category = styled.li`
     font-size: 17px;
     font-weight: 700;
     margin: 0 0 2px 6px;
+    ${CustomMediaStyle.lessThan('mobile')`
+    margin: 0 0 0px 6px;
+	`}
   }
 `;
 
@@ -100,6 +112,9 @@ const Line = styled.li`
   height: 16px;
   list-style: none;
   background: #c5c8ce;
+  ${CustomMediaStyle.lessThan('mobile')`
+    margin: 0 4px 0 15px;
+	`}
 `;
 
 const Menu = styled.li`
@@ -113,6 +128,9 @@ const Menu = styled.li`
     font-weight: 700;
     padding: 0 20px;
     cursor: pointer;
+    ${CustomMediaStyle.lessThan('mobile')`
+    padding: 0 8px;
+	`}
   }
 `;
 
@@ -122,6 +140,9 @@ const HeaderRight = styled.div`
   flex-direction: row;
   position: relative;
   margin-left: auto;
+  ${CustomMediaStyle.lessThan('mobile')`
+    margin-right: 600px;
+	`}
 `;
 
 const BookMarkIcon = styled.div`
@@ -133,6 +154,10 @@ const BookMarkIcon = styled.div`
   img {
     width: 32px;
     height: 32px;
+    ${CustomMediaStyle.lessThan('mobile')`
+    width: 25px;
+    height: 25px;
+	`}
   }
 `;
 
@@ -145,6 +170,10 @@ const CartIcon = styled.div`
   img {
     width: 32px;
     height: 32px;
+    ${CustomMediaStyle.lessThan('mobile')`
+    width: 25px;
+    height: 25px;
+	`}
   }
 `;
 

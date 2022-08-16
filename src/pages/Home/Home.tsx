@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import HomeHeader from '../../components/Home/HomeHeader';
 import HomeFigure from '../../components/Home/HomeFigure';
 import HomeProductList from '../../components/Home/HomeProductList';
+import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
 function Home() {
   const [productInfo, setProductInfo] = useState([]);
@@ -56,6 +57,9 @@ function Home() {
 
 const Container = styled.div`
   padding: 110px 0 0 0;
+  ${CustomMediaStyle.lessThan('mobile')`
+  padding: 80px 0 0 0;
+	`}
 `;
 
 const ViewContent = styled.div`
@@ -63,6 +67,9 @@ const ViewContent = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 40px 0;
+  ${CustomMediaStyle.lessThan('mobile')`
+  padding: 20px 0;
+	`}
 `;
 
 export default Home;

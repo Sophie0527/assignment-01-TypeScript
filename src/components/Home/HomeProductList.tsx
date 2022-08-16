@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
 interface Props {
   productInfo: any;
@@ -68,6 +69,9 @@ const WrapProductList = styled.div`
   overflow: scroll;
   overflow: auto;
   white-space: nowrap;
+  ${CustomMediaStyle.lessThan('mobile')`
+  width: 585px;
+	`}
 `;
 
 const ProductList = styled.div`
@@ -78,6 +82,9 @@ const ProductList = styled.div`
   display: inline-flex;
   margin: 28px 6px;
   cursor: pointer;
+  ${CustomMediaStyle.lessThan('mobile')`
+  margin: 10px 6px;
+	`}
 `;
 
 const SubImageBox = styled.div`
