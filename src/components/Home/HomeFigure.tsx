@@ -9,7 +9,6 @@ interface Props {
 
 export default function HomeFigure(props: Props) {
   const productLists = props.productInfo.productList;
-  console.log(productLists);
 
   return (
     <Figure>
