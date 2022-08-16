@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# TypeScript\_ 사진과 가구 조합 컴포넌트 구현
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 집꾸미기 집소개 기능에 포함되어 있는 사진과 가구 정보를 조합하는 컴포넌트 TypeScript로 구현하기
 
-## Available Scripts
+  - 참고: [https://www.ggumim.co.kr/star/view/4582](https://www.ggumim.co.kr/star/view/4582)
 
-In the project directory, you can run:
+## ✎ Introduction
 
-### `npm start`
+- 개발 기간 | 2022-08-10 ~ 2022-08-11,16 (3일)
+- 개발 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img src="" height="200"/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 가구 정보가 있는 곳에 돋보기 모양의 버튼을 표시
+- 돋보기를 클릭하면 상품정보 tool tip 출력되면서 돋보기모양이 닫기 버튼으로 변경
+- 닫기 버튼을 클릭하면 tool tip을 없애고 돋보기 버튼으로 변경
+- tool tip은 하나만 노출. tool tip이 노출되고 있는 상태에서 다른 가구를 선택하면 노출되고 있 던 tool tip은 닫히고 새로 클릭한 가구 tool tip만 노출  
+  </br>
 
-### `npm test`
+<img src="" height="320"/>
+  
+  - 하단에 있는 상품목록에서 해당 가구가 선택되었으면 tool tip 출력
+  - 선택된 가구는 선택되었으면 표시
+  - 할인율이 존재하는 경우에는 상단에 할인율(discountRate) 표시 
+  </br>
+  
+  - 가구 정보는 2가지 형식이 존재 (입점 / 비입점 가구)
+  
+  <img src="" width="216"/>
+  
+   - 입점되어 있는 가구 (product 정보에 outside가 false 이 가구)
+      - 상품 이미지 (product 정보 imageUrl)
+      - 상품명 (product 정보 name)
+      - 할인율 (product 정보 discount)
+      - 가격 (product 정보 priceDiscount)
+      </br>
+      
+   <img src="" width="210"/>
+   
+   - 입점되지 않는 가구
+      - 상품이미지 (product 정보 imageUrl)
+      - 상품명 (product 정보 name)
+      - 예상 가격 (product 정보 priceDiscount)
+      </br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 개발기능 시연
+  <img src="" height="600"/>
 
-### `npm run build`
+## ✎ Technlogies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Front-end
+  - HTML | JAVASCRIPT | REACT | TYPESCRIPT | STYLED-COMPONENTS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✎ Contact
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- ssh30510044@gmail.com, [기술블로그](https://sophie0527.tistory.com/), [깃허브](https://github.com/Sophie0527)
