@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
 interface Props {
   productInfo: any;
@@ -82,6 +83,9 @@ const Figure = styled.figure`
 const MainImage = styled.img`
   width: 800px;
   cursor: pointer;
+  ${CustomMediaStyle.lessThan('mobile')`
+		width: 590px;
+	`}
 `;
 
 const Button = styled.div<{ pointX: number; pointY: number }>`
@@ -91,6 +95,10 @@ const Button = styled.div<{ pointX: number; pointY: number }>`
   height: 40px;
   position: absolute;
   cursor: pointer;
+  ${CustomMediaStyle.lessThan('mobile')`
+  top: ${(props: any) => props.pointX * 1.2}px;
+  left: ${(props: any) => props.pointY * 1.2}px;
+	`}
   img {
     width: 32px;
   }

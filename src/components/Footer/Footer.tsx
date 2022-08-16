@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
 function Footer() {
   return (
@@ -95,6 +96,9 @@ const Input = styled.div`
   color: #333c45;
   font-size: 15px;
   cursor: pointer;
+  ${CustomMediaStyle.lessThan('mobile')`
+  width: 400px;
+	`}
 `;
 
 const Submit = styled.div`
