@@ -4,13 +4,13 @@ import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
 interface Props {
   productInfo: any;
-  search: any;
+  search: boolean[];
   handleSearch: any;
 }
 
 export default function HomeFigure(props: Props) {
   const productLists = props.productInfo.productList;
-
+  console.log(productLists);
   return (
     <Figure>
       <MainImage
