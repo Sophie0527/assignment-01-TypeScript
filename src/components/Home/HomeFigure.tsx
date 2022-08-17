@@ -88,12 +88,12 @@ const MainImage = styled.img`
 	`}
 `;
 
-interface point {
+interface Point {
   pointX: number;
   pointY: number;
 }
 
-const Button = styled.div<point>`
+const Button = styled.div<Point>`
   top: ${props => props.pointX * 1.6}px;
   left: ${props => props.pointY * 1.6}px;
   width: 40px;
