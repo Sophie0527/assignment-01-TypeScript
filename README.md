@@ -48,12 +48,20 @@
 
    <img src="https://user-images.githubusercontent.com/100933263/184804283-d0e9ed16-8474-4d3e-aa4e-a25e63449026.jpg" height="350"/>
       </br>
-     
+      
+  ### 개발기능 시연
+   <img src="https://user-images.githubusercontent.com/100933263/183377666-09211b28-ecd7-4644-bcae-04b37c605c58.gif" height="600"/>
+   </br>
 
 ## ✎ Technlogies
-
-- Front-end
-  - HTML | JAVASCRIPT | REACT | TYPESCRIPT | STYLED-COMPONENTS
+ <div> 
+<img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> 
+<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
+<img src="https://img.shields.io/badge/typeScript-3178C6?style=for-the-badge&logo=typeScript&logoColor=white">
+<img src="https://img.shields.io/badge/styled-components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white">
+</div> 
+<br>
 
 ## ✎ Contact
 
