@@ -24,7 +24,7 @@ interface Props {
   handleSearch: (index: number) => void;
 }
 export default function HomeFigure(props: Props) {
-  const productLists = props.productInfo?.productList;
+  const productLists = props.productInfo.productList;
 
   return (
     <Figure>
