@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
 interface IProps {
-  productInfo: { id: number; imageUrl: string; productList: IProductList[] };
+  productInfo: { id: number; imageUrl: string; productList: IProduct[] };
 }
-export interface IProductList {
+export interface IProduct {
   idx: number;
   productId: number;
   productName: string;
@@ -29,26 +29,23 @@ export default function HomeFigure(props: Props) {
 
   return (
     <WrapProductList>
-      {productLists?.map((productLists: IProductList, index: number) => {
+      {productLists?.map((product, index) => {
         return (
           <ProductList
-            key={productLists.productId}
+            key={product.productId}
             onClick={() => props.handleSearch(index)}
           >
             {!props.search[index] ? (
               <SubImageBox>
-                <SubImage
-                  src={productLists.imageUrl}
-                  alt={productLists.productName}
-                />
-                {productLists.discountRate !== 0 ? (
+                <SubImage src={product.imageUrl} alt={product.productName} />
+                {product.discountRate !== 0 ? (
                   <DiscountIconBox>
                     <img
                       src="//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png"
                       alt="할인북마크아이콘"
                     />
                     <DiscountPrice>
-                      {productLists.discountRate}
+                      {product.discountRate}
                       <span>%</span>
                     </DiscountPrice>
                   </DiscountIconBox>
@@ -56,18 +53,15 @@ export default function HomeFigure(props: Props) {
               </SubImageBox>
             ) : (
               <SubImageBoxPoint>
-                <SubImage
-                  src={productLists.imageUrl}
-                  alt={productLists.productName}
-                />
-                {productLists.discountRate !== 0 ? (
+                <SubImage src={product.imageUrl} alt={product.productName} />
+                {product.discountRate !== 0 ? (
                   <DiscountIconBox>
                     <img
                       src="//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png"
                       alt="할인북마크아이콘"
                     />
                     <DiscountPrice>
-                      {productLists.discountRate}
+                      {product.discountRate}
                       <span>%</span>
                     </DiscountPrice>
                   </DiscountIconBox>

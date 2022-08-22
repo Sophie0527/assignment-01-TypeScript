@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
 interface IProps {
-  productInfo: { id: number; imageUrl: string; productList: IProductList[] };
+  productInfo: { id: number; imageUrl: string; productList: IProduct[] };
 }
-export interface IProductList {
+export interface IProduct {
   idx: number;
   productId: number;
   productName: string;
@@ -33,11 +33,11 @@ export default function HomeFigure(props: Props) {
         alt="메인 이미지"
         onClick={() => props.handleSearch}
       />
-      {productLists?.map((productLists: IProductList, index: number) => {
+      {productLists?.map((product, index) => {
         return (
           <Button
-            pointX={productLists.pointX}
-            pointY={productLists.pointY}
+            pointX={product.pointX}
+            pointY={product.pointY}
             onClick={() => props.handleSearch(index)}
             key={index}
           >
@@ -57,19 +57,16 @@ export default function HomeFigure(props: Props) {
                   alt="세모아이콘"
                 />
                 <ToolTip>
-                  <img
-                    src={productLists.imageUrl}
-                    alt={productLists.productName}
-                  />
+                  <img src={product.imageUrl} alt={product.productName} />
                   <ToolTipDesc>
-                    <span>{productLists.productName}</span>
+                    <span>{product.productName}</span>
                     <ToolTipPrice>
-                      {productLists.outside === true ? (
+                      {product.outside === true ? (
                         <div>예상가</div>
                       ) : (
-                        <span>{productLists.discountRate}%</span>
+                        <span>{product.discountRate}%</span>
                       )}
-                      {productLists.priceDiscount
+                      {product.priceDiscount
                         .toString()
                         .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')}
                     </ToolTipPrice>
