@@ -2,18 +2,34 @@ import React from 'react';
 import styled from 'styled-components';
 import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
+interface IProps {
+  productInfo: { id: number; imageUrl: string; productList: IProductList[] };
+}
+export interface IProductList {
+  idx: number;
+  productId: number;
+  productName: string;
+  outside: boolean;
+  pointX: number;
+  pointY: number;
+  priceOriginal: number;
+  priceDiscount: number;
+  discountRate: number;
+  imageUrl: string;
+}
+
 interface Props {
-  productInfo: any;
+  productInfo: IProps['productInfo'];
   search: boolean[];
-  handleSearch: any;
+  handleSearch: (index: number) => void;
 }
 
 export default function HomeFigure(props: Props) {
-  const productLists = props.productInfo.productList;
+  const productLists = props.productInfo?.productList;
 
   return (
     <WrapProductList>
-      {productLists?.map((productLists: any, index: number) => {
+      {productLists?.map((productLists: IProductList, index: number) => {
         return (
           <ProductList
             key={productLists.productId}
