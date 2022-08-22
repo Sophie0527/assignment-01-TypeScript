@@ -6,7 +6,11 @@ import HomeProductList from '../../components/Home/HomeProductList';
 import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
 function Home() {
-  const [productInfo, setProductInfo] = useState([]);
+  const [productInfo, setProductInfo] = useState({
+    id: 0,
+    imageUrl: '',
+    productList: [],
+  });
 
   useEffect(() => {
     fetch('https://cdn.ggumim.co.kr/test/image_product_link.json', {

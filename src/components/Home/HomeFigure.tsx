@@ -2,12 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import { CustomMediaStyle } from '../../styles/CustomMediaStyle';
 
-interface Props {
-  productInfo: any;
-  search: boolean[];
-  handleSearch: any;
+interface IProps {
+  productInfo: { id: number; imageUrl: string; productList: IProductList[] };
+}
+export interface IProductList {
+  idx: number;
+  productId: number;
+  productName: string;
+  outside: boolean;
+  pointX: number;
+  pointY: number;
+  priceOriginal: number;
+  priceDiscount: number;
+  discountRate: number;
+  imageUrl: string;
 }
 
+interface Props {
+  productInfo: IProps['productInfo'];
+  search: boolean[];
+  handleSearch: (index: number) => void;
+}
 export default function HomeFigure(props: Props) {
   const productLists = props.productInfo.productList;
 
@@ -16,9 +31,9 @@ export default function HomeFigure(props: Props) {
       <MainImage
         src={props.productInfo.imageUrl}
         alt="메인 이미지"
-        onClick={() => props.handleSearch()}
+        onClick={() => props.handleSearch}
       />
-      {productLists?.map((productLists: any, index: number) => {
+      {productLists?.map((productLists: IProductList, index: number) => {
         return (
           <Button
             pointX={productLists.pointX}
