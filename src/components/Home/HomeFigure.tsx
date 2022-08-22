@@ -33,11 +33,11 @@ export default function HomeFigure(props: Props) {
         alt="메인 이미지"
         onClick={() => props.handleSearch}
       />
-      {productLists?.map((productLists: IProductList, index: number) => {
+      {productLists?.map((IProduct, index) => {
         return (
           <Button
-            pointX={productLists.pointX}
-            pointY={productLists.pointY}
+            pointX={IProduct.pointX}
+            pointY={IProduct.pointY}
             onClick={() => props.handleSearch(index)}
             key={index}
           >
@@ -57,19 +57,16 @@ export default function HomeFigure(props: Props) {
                   alt="세모아이콘"
                 />
                 <ToolTip>
-                  <img
-                    src={productLists.imageUrl}
-                    alt={productLists.productName}
-                  />
+                  <img src={IProduct.imageUrl} alt={IProduct.productName} />
                   <ToolTipDesc>
-                    <span>{productLists.productName}</span>
+                    <span>{IProduct.productName}</span>
                     <ToolTipPrice>
-                      {productLists.outside === true ? (
+                      {IProduct.outside === true ? (
                         <div>예상가</div>
                       ) : (
-                        <span>{productLists.discountRate}%</span>
+                        <span>{IProduct.discountRate}%</span>
                       )}
-                      {productLists.priceDiscount
+                      {IProduct.priceDiscount
                         .toString()
                         .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')}
                     </ToolTipPrice>
