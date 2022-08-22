@@ -39,7 +39,7 @@ export default function HomeFigure(props: Props) {
             pointX={product.pointX}
             pointY={product.pointY}
             onClick={() => props.handleSearch(index)}
-            key={index}
+            key={product.productId}
           >
             {!props.search[index] ? (
               <img
